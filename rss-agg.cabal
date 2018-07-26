@@ -59,8 +59,13 @@ executable rss-agg
   -- Other library packages from which modules are imported.
   build-depends:       
         base >= 4.11 && < 5,
+        bytestring,
+        conduit,
         http-conduit,
-        xml-conduit
+        xml-conduit,
+        xml-types
+
+  extra-libraries: zlib
 
   -- Directories containing source files.
   hs-source-dirs:      src

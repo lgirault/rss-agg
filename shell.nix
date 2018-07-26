@@ -7,7 +7,9 @@ let
            "${compiler}" = pkgs.haskell.packages."${compiler}".override {
                 overrides = haskellPackagesNew: haskellPackagesOld: rec {
                   rss-agg =
-                    haskellPackagesNew.callPackage ./default.nix { };
+                    haskellPackagesNew.callPackage ./default.nix {
+                       zlib = pkgs.zlib;
+                    };
 
                   conduit =
                     haskellPackagesNew.callPackage ./deps/conduit.nix { };
@@ -53,5 +55,4 @@ let
 #  pkgs = import src { inherit config; };
 
 in
-  { rss-agg = pkgs.haskell.packages.${compiler}.rss-agg;
-  }
+  { rss-agg = pkgs.haskell.packages.${compiler}.rss-agg; }
