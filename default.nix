@@ -1,5 +1,5 @@
 { mkDerivation, base, bytestring, conduit, http-conduit, stdenv
-, xml-conduit, xml-types, zlib
+, xml-conduit, xml-types
 }:
 mkDerivation {
   pname = "rss-agg";
@@ -10,6 +10,5 @@ mkDerivation {
   executableHaskellDepends = [
     base bytestring conduit http-conduit xml-conduit xml-types
   ];
-  executablePkgconfigDepends = [ zlib ];
   license = stdenv.lib.licenses.bsd3;
 }

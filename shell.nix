@@ -7,9 +7,7 @@ let
            "${compiler}" = pkgs.haskell.packages."${compiler}".override {
                 overrides = haskellPackagesNew: haskellPackagesOld: rec {
                   rss-agg =
-                    haskellPackagesNew.callPackage ./default.nix {
-                       zlib = pkgs.zlib;
-                    };
+                    haskellPackagesNew.callPackage ./default.nix { };
 
                   conduit =
                     haskellPackagesNew.callPackage ./deps/conduit.nix { };

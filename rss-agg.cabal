@@ -65,8 +65,6 @@ executable rss-agg
         xml-conduit,
         xml-types
 
-  pkgconfig-depends: zlib
-
   -- Directories containing source files.
   hs-source-dirs:      src
 
