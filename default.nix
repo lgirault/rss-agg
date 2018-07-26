@@ -10,6 +10,6 @@ mkDerivation {
   executableHaskellDepends = [
     base bytestring conduit http-conduit xml-conduit xml-types
   ];
-  executableSystemDepends = [ zlib ];
+  executablePkgconfigDepends = [ zlib ];
   license = stdenv.lib.licenses.bsd3;
 }
